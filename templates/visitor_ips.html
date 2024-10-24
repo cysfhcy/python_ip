@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问者 IP 地址</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎光临！</h1>
+        <h2>访问者 IP 地址信息</h2>
+        <div class="info-box">
+            {% for info in infos %}
+                <div class="info-item">
+                    <p class="ip-address">IP 地址: <strong>{{ info.ip }}</strong></p>
+                    <p class="location">位置: <strong>中国 - {{ info.regionName }} - {{ info.city }}</strong></p>
+                    <p class="coordinates">坐标: <em>{{ info.lat }}, {{ info.lon }}</em></p>
+                    <p class="visit-time">访问时间: <span>{{ info.visit_time }}</span></p> <!-- 访问时间 -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

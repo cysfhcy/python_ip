@@ -1,0 +1,16 @@
+
+        /* 内联 CSS 以便快速设置样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            color: #00796b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
